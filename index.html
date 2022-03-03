@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          <title>Data Table</title>
+		  <style>
+		      table
+			  {
+			    border:1px solid black;
+				border-collapse:collapse;
+			  }
+			  td,th
+			  {
+			    border:1px solid black;
+				taxt-align:center;
+			  }
+			  input
+			  {
+				width:60px;
+			  }			  			  
+		  </style>
+      </head>
+      <body>
+          <table id="tbl">
+		       <caption>Educational qualification</caption>
+               <thead>
+			        <tr>
+					   <th>Degree</th>
+					   <th>institute</th>
+					   <th>Grade</th>
+					   <th>GPA</th>
+					   <th>Year</th>
+					</tr>
+			   </thead>
+			   <tbody>
+			        <tr> 
+						<td>
+					       <select>
+							   <option> PMIT</option>
+							   <option> PGDIT</option>
+							   <option> MBA</option>
+							   <option> BBA</option>
+							   <option> HSC</option>
+							   <option> SSC</option>
+					       </select>
+						</td>
+						<td>
+					        <select>
+								<option> JU</option>
+								<option> DU</option>
+								<option> UIU</option>
+								<option> ULAB</option>
+					        </select>
+						</td>
+						<td>
+					        <select>
+								<option> A+ </option>
+								<option> A </option>
+								<option> A- </option>
+								<option> B+ </option>
+								<option> B </option>
+								<option> B- </option>
+								<option> C+ </option>
+								<option> C </option>
+								<option> D </option>
+					        </select>
+					    </td>
+						<td>
+						   <input type ="text">
+					    </td>
+						<td>
+					        <select>
+					        <option>2021</option>
+					        <option>2020</option>
+							<option>2019</option>
+							<option>2018</option>
+							<option>2017</option>
+							<option>2016</option>
+							<option>2015</option>
+					        </select>
+						</td>
+					</tr>
+			   </tbody>
+          </table>
+		  <br/>
+		        <button onclick = "addRow();">Add + </button>
+		        <script>
+				    function addRow()
+					{
+					   var tbl = document.getElementById("tbl");
+					    var newRow = tbl.insertRow();
+						newRow.innerHTML =
+					                       '<td>'+
+						                   '	<select>'+
+													'<option>PMIT</option>'+
+													'<option>PGDIT</option>'+
+													'<option> MBA</option>'+
+													'<option> BBA</option>'+
+													'<option> HSC</option>'+
+													'<option> SSC</option>'+
+												'</select>'+
+										   '<td>'+
+												'<select>'+
+													'<option>JU</option>'+
+													'<option>DU</option>'+
+													'<option> UIU</option>'+
+													'<option> ULAB</option>'+
+												'</select>'+
+										   '</td>'+
+										   '<td>'+
+												'<select>'+
+													'<option>A+</option>'+
+													'<option>A</option>'+
+													'<option> A- </option>'+
+													'<option> B+ </option>'+
+													'<option> B </option>'+
+													'<option> B- </option>'+
+													'<option> C+ </option>'+
+													'<option> C </option>'+
+													'<option> D </option>'+
+												'</select>'+
+										   '</td>'+
+										   '<td>'+
+												'<input type ="text">'+
+										   '</td>'+
+										   '<td>'+
+												'<select>'+
+													'<option>2020</option>'+
+													'<option>2021</option>'+
+													'<option>2019</option>'+
+													'<option>2018</option>'+
+													'<option>2017</option>'+
+													'<option>2016</option>'+
+													'<option>2015</option>'+
+												'</select>'+
+										   '</td>'
+					}
+				
+				</script>
+      </body>
+</html>
